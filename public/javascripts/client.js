@@ -1,7 +1,7 @@
 /**
  * Created by briandaves on 10/25/15.
  */
-var app = angular.module('siteApp', ['ngRoute']);
+var app = angular.module('site', ['ngRoute']);
 
 app.config(function($routeProvider, $locationProvider){
     $routeProvider

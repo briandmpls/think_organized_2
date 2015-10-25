@@ -39,6 +39,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 //app.use('/angular',express.static(path.join(__dirname, './node_modules/angular')));
+app.use('/views',express.static(path.join(__dirname, '/views')));
 
 app.use('/', routes);
 app.use('/users', users);

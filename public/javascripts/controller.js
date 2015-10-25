@@ -1,4 +1,4 @@
-var app = angular.module('site',[]);
+//var app = angular.module('site',[]);
 
 app.controller('MainController', ['$scope','$http', function($scope,$http) {
 
@@ -154,4 +154,7 @@ app.controller('MainController', ['$scope','$http', function($scope,$http) {
 
 
 
+}]);
+
+app.controller('HomeController', ['$scope','$http', function($scope,$http) {
 }]);
