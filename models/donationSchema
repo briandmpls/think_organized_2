@@ -1,0 +1,16 @@
+var mongoose = require('mongoose');
+var Schema = mongoose.Schema;
+
+var donationSchema = new Schema({
+    name : String,
+    location : String,
+    phone : String,
+    hoursAccepting : String,
+    notes : String,
+    distanceAway :String
+});
+
+var site = mongoose.model('site', donationSchema);
+
+module.exports = site;
+
