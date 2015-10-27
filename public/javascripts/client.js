@@ -9,14 +9,21 @@ app.config(function($routeProvider, $locationProvider){
             templateUrl:'views/home.html',
             controller: 'HomeController'
         })
-        .when('/about',{
-            templateUrl:'views/about.html',
-            controller: 'AboutController'
+        .when('/add',{
+            templateUrl:'views/add.html',
+            controller: 'AddController'
+        })
+        .when('/results',{
+            templateUrl:'views/results.html',
+            controller: 'ResultsController'
         })
         .when('/contact', {
             templateUrl: 'views/contact.html',
             controller: 'ContactController'
 
+        })
+        .otherwise({
+            redirect: '/'
         });
 
     $locationProvider.html5Mode(true);

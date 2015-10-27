@@ -1,0 +1,11 @@
+<ul>
+    <li ng-repeat="thing in donationList | orderBy:'distanceAway' | limitTo: 5">
+        <span ng-class="here" class ="siteName">{{thing.name}}</span><br>
+        <span ng-class="here" class ="siteInfo">{{thing.location}}</span><br>
+        <span ng-class="here" class ="siteInfo">{{thing.phone}}</span><br>
+        <span ng-class="here" class ="siteInfo">{{thing.hoursAccepting}}</span><br>
+        <span ng-class="here" class ="siteInfo">{{thing.notes}}</span><br>
+        <span ng-class="here" class ="siteDistance">{{thing.distanceAway}} miles</span><br><br>
+    </li>
+    <!--<li ng-repeat = "thing in distanceArray">{{thing}}</li>-->
+</ul>

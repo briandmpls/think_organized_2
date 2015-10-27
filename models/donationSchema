@@ -6,11 +6,12 @@ var donationSchema = new Schema({
     location : String,
     phone : String,
     hoursAccepting : String,
-    notes : String,
-    distanceAway :String
+    notes : String
+   // distanceAway: Number
+
 });
 
-var site = mongoose.model('site', donationSchema);
+var site = mongoose.model('thinkorganized', donationSchema);
 
 module.exports = site;
 

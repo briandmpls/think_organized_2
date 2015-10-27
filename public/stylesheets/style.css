@@ -1,16 +1,24 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 14px Arial,"Lucida Grande", Helvetica, sans-serif;
 }
 
 a {
-  color: #00B7FF;
+  color: #0c4368;
 }
 
+/*h1{*/
+  /*font-size: 71px;*/
+  /*display: inline;*/
+  /*margin: 10px 0 0 31px;*/
+  /*color:#0c4368;*/
+/*}*/
 .title {
+  margin-top: 10px;
   margin-left: 14px;
   float: left;
-  font-size: 54px;
+  font-size: 76px;
+  color: #0c4368;
 }
 
 .logo {
@@ -26,7 +34,7 @@ li {
   clear: both;
   margin: 0 auto;
   width:100%;
-  padding-top: 100px;
+  padding-top: 42px;
 }
 .inputHere {
   display:block;
@@ -49,5 +57,55 @@ li {
   padding: 65px;
   background-color: #3364BF;
   border-radius: 47px;
+  text-underline: none;
 
+}
+
+.searchButton {
+  width: 50%;
+  text-align: center;
+  font-size: 45px;
+  margin: 55px 143px;
+  padding: 65px;
+  background-color: #1d6e99;
+  border-radius: 47px;
+  text-decoration: none;
+  display: block;
+  color:black;
+
+}
+
+
+.searchButton:hover {
+  background-color: #629046;
+}
+
+
+.footer{
+  width: 50%;
+  font-size: 40px;
+  margin-top: 200px;
+  display: inline;
+  text-align: center;
+  color: #0c4368;
+}
+
+.footerButtonLeft{
+  padding-left:37px;
+}
+
+.footerButton{
+  padding-left: 173px;
+  color: #0c4368;
+}
+.siteInfo {
+  color:#0C4368;
+}
+
+.siteName{
+ color: #BA4C46;
+}
+
+.siteDistance{
+  color: #629046;
 }

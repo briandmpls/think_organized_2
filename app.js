@@ -16,7 +16,8 @@ var donationRouter = require('./routes/donationRouter');
 
 
 // This names the database and gives it a location
-var mongoURI = "mongodb://localhost:27017/sites";
+//var mongoURI = "mongodb://localhost:27017/sites";
+var mongoURI = "mongodb://<briandmpls>:<Arpdale78704>@ds045604.mongolab.com:45604/thinkorganized";
 var MongoDB = mongoose.connect(mongoURI).connection;
 
 MongoDB.on('error', function (err) {
@@ -38,7 +39,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-//app.use('/angular',express.static(path.join(__dirname, './node_modules/angular')));
+
 app.use('/views',express.static(path.join(__dirname, '/views')));
 
 app.use('/', routes);
