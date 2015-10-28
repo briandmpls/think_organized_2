@@ -16,7 +16,7 @@ var donationRouter = require('./routes/donationRouter');
 
 
  //This names the database and gives it a location
-// var mongoURI = "mongodb://localhost/thinkorganized";
+//var mongoURI = "mongodb://localhost:27017/sites";
 var mongoURI = "mongodb://thinkorganized:theosamwoody@ds045604.mongolab.com:45604/thinkorganized";
 var MongoDB = mongoose.connect(mongoURI).connection;
 

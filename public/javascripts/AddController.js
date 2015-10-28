@@ -4,8 +4,7 @@
 
 app.controller('AddController', ['$scope','$http', function($scope,$http) {
 
-
-
+    $scope.donationList = [];
 
 // Add new sites to the donationList
 
@@ -22,8 +21,7 @@ app.controller('AddController', ['$scope','$http', function($scope,$http) {
                 notes: $scope.newNotes
             });
 
-        console.log(donationList);
-        data = {
+       var data = {
             name: $scope.newName,
             location: $scope.newLocation,
             phone: $scope.newPhone,
@@ -31,7 +29,6 @@ app.controller('AddController', ['$scope','$http', function($scope,$http) {
             notes: $scope.newNotes
         };
 
-console.log(data);
 //Post new sites to the database
         $http.post('/site/addSites', data).then(function (newData) {
             console.log('add site route');
