@@ -38,7 +38,6 @@ app.controller('ResultsController', ['$scope','$http','$filter', function($scope
       //  $scope.$digest();
         console.log(lat,long);
         console.log($scope.place);
-        console.log(1);
         getData();
     };
 
@@ -49,10 +48,8 @@ app.controller('ResultsController', ['$scope','$http','$filter', function($scope
     function getData(){
         $scope.donationList = [];
 
-        console.log(2);
         $http.get('/site/getSites',data).then(function (response) {
             // console.log(response);
-            console.log(3);
             var dataItems = response.data;
 
 //How can this have distance away already if it is not in database
@@ -75,7 +72,6 @@ app.controller('ResultsController', ['$scope','$http','$filter', function($scope
     }
 
     function calcDistance(item){
-        console.log(5);
         var directionsService = new google.maps.DirectionsService();
 
         var startingPoint = lat + ',' + long;
@@ -94,7 +90,6 @@ app.controller('ResultsController', ['$scope','$http','$filter', function($scope
             console.log(response);
             if (status == google.maps.DirectionsStatus.OK) {
                 console.log('Status ok');
-                console.log(6);
                 item.distanceAway = response.routes[0].legs[0].distance.value;
                 console.log('Data after modification', item);
                 item.distanceAway = (item.distanceAway/1609.34).toFixed(1);
@@ -103,22 +98,10 @@ app.controller('ResultsController', ['$scope','$http','$filter', function($scope
                 console.log(item.distanceAway);
 
 ////Push to the distanceArray----------------(
-                console.log(7);
                 console.log('before push');
                 console.log($scope.donationList);
                 $scope.donationList.push(item);
 
-//
-//// Ordering the list by distance
-//    $scope.order = function(predicate, reverse) {
-//        $scope.donationList = orderBy( $scope.donationList, predicate, reverse);
-//        console.log();
-//        console.log(predicate);
-//    };
-//    console.log("call to order");
-//
-//    $scope.order('distanceAway',false);
-//                console.log($scope.donationList);
 
 
                 $scope.$apply();
@@ -127,17 +110,9 @@ app.controller('ResultsController', ['$scope','$http','$filter', function($scope
                 console.log("Problem Dude!", status);
             }
 
-
         });
-
-
-
 
     }
     getLocation();
-
-
-
-
 
 }]);

@@ -20,20 +20,18 @@ app.controller('AddController', ['$scope','$http', function($scope,$http) {
                 phone: $scope.newPhone,
                 hoursAccepting: $scope.newHoursAccepting,
                 notes: $scope.newNotes
-                //distanceAway: $scope.newDistanceAway
             });
 
-
+        console.log(donationList);
         data = {
             name: $scope.newName,
             location: $scope.newLocation,
             phone: $scope.newPhone,
             hoursAccepting: $scope.newHoursAccepting,
             notes: $scope.newNotes
-            //distanceAway: $scope.newDistanceAway
         };
 
-
+console.log(data);
 //Post new sites to the database
         $http.post('/site/addSites', data).then(function (newData) {
             console.log('add site route');

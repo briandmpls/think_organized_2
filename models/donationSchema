@@ -11,7 +11,7 @@ var donationSchema = new Schema({
 
 });
 
-var site = mongoose.model('thinkorganized', donationSchema);
+var site = mongoose.model('site', donationSchema);
 
 module.exports = site;
 

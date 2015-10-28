@@ -5,8 +5,8 @@ var donationSchema = require('../models/donationSchema');
 
 //retrieves data from the database
 router.get('/getSites',function(req,res,next){
-    donationSchema.find(function(err,thinkorganized){
-        res.json(thinkorganized);
+    donationSchema.find(function(err,sites){
+        res.json(sites);
     })
 });
 
