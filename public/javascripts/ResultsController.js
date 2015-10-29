@@ -74,7 +74,7 @@ app.controller('ResultsController', ['$scope','$http','$filter', function($scope
     }
 
     function calcDistance(item){
-        directionsService = new google.maps.DirectionsService();
+        directionsService = new google.maps.directionsService();
 
         var startingPoint = lat + ',' + long;
 
