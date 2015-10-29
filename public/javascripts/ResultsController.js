@@ -73,6 +73,8 @@ app.controller('ResultsController', ['$scope','$http','$filter', function($scope
 
     }
 
+    var timeOut = setInterval(calcDistance, 5000);
+
     function calcDistance(item){
         var directionsService = new google.maps.DirectionsService();
 
@@ -85,34 +87,36 @@ app.controller('ResultsController', ['$scope','$http','$filter', function($scope
             destination: address,
             optimizeWaypoints: true,
             travelMode: google.maps.TravelMode.DRIVING
-        };
-    }
-    DirectionsService.route(request, function(response, status){
-        console.log(response);
-        if (status == google.maps.DirectionsStatus.OK) {
-            console.log('Status ok');
-            item.distanceAway = response.routes[0].legs[0].distance.value;
-            console.log('Data after modification', item);
-            item.distanceAway = (item.distanceAway/1609.34).toFixed(1);
-            //angular.isNumber(item.distanceAway);
-            item.distanceAway = parseFloat(item.distanceAway);
-            console.log(item.distanceAway);
+
+
+
+        DirectionsService.route(request, function(response, status){
+            console.log(response);
+            if (status == google.maps.DirectionsStatus.OK) {
+                console.log('Status ok');
+                item.distanceAway = response.routes[0].legs[0].distance.value;
+                console.log('Data after modification', item);
+                item.distanceAway = (item.distanceAway/1609.34).toFixed(1);
+                //angular.isNumber(item.distanceAway);
+                item.distanceAway = parseFloat(item.distanceAway);
+                console.log(item.distanceAway);
 
 ////Push to the distanceArray----------------(
-            console.log('before push');
-            console.log($scope.donationList);
-            $scope.donationList.push(item);
+                console.log('before push');
+                console.log($scope.donationList);
+                $scope.donationList.push(item);
 
 
 
-            $scope.$apply();
+                $scope.$apply();
 
-        }else{
-            console.log("Problem Dude!", status);
-        }
+            }else{
+                console.log("Problem Dude!", status);
+            }
 
-    });
+        });
 
+    }
     getLocation();
 
 }]);
