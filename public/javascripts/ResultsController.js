@@ -3,7 +3,7 @@
  */
 
 app.controller('ResultsController', ['$scope','$http','$filter', function($scope,$http,$filter) {
-    var directionsService;
+
     $scope.loading = true;
     $scope.place = '';
     var lat= '';
@@ -74,7 +74,7 @@ app.controller('ResultsController', ['$scope','$http','$filter', function($scope
     }
 
     function calcDistance(item){
-        directionsService = new google.maps.directionsService();
+        var directionsService = new google.maps.DirectionsService();
 
         var startingPoint = lat + ',' + long;
 
@@ -88,7 +88,7 @@ app.controller('ResultsController', ['$scope','$http','$filter', function($scope
         };
 
 
-        directionsService.route(request, function(response, status){
+        DirectionsService.route(request, function(response, status){
             console.log(response);
             if (status == google.maps.DirectionsStatus.OK) {
                 console.log('Status ok');
