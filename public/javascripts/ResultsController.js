@@ -3,7 +3,7 @@
  */
 
 app.controller('ResultsController', ['$scope','$http','$filter', function($scope,$http,$filter) {
-
+    initMap();
     $scope.loading = true;
     $scope.place = '';
     var lat= '';
@@ -27,7 +27,7 @@ app.controller('ResultsController', ['$scope','$http','$filter', function($scope
         } else {
             $scope.place = "Geolocation is not supported by this browser.";
         }
-    };
+    }
 
     $scope.showPosition = function(position) {
         lat = position.coords.latitude;
@@ -82,12 +82,12 @@ app.controller('ResultsController', ['$scope','$http','$filter', function($scope
 
         address = item.location;
 
-        var request =  {
+        var request = {
             origin: startingPoint,
             destination: address,
             optimizeWaypoints: true,
             travelMode: google.maps.TravelMode.DRIVING
-
+        };
 
 
         directionsService.route(request, function(response, status){
