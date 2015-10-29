@@ -7,7 +7,7 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDIwpUz0dqnGm5qxO1ggDQB0dkt25queRA&callback=initMap" async defer></script>
 
     <link rel="stylesheet" href="./stylesheets/style.css"/>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./stylesheets/font-awesome.min.css">
     <script src="/vendor/angular/angular.min.js"></script>
     <script src="/vendor/angular-route/angular-route.min.js"></script>
     <script src="javascripts/client.js"></script>
@@ -27,16 +27,16 @@
 
 
                 <div class = 'main'>
+                    <!--<div ng-show="loading">-->
 
-                    <!--<i class="fa fa-spinner" ng-show="loading"></i>-->
                     <ng-view>
 
-                        <i class="fa fa-spinner" ng-show="loading"></i>
+                        <!--<i class="fa fa-spinner" ng-show="loading"></i>-->
 
 
                     </ng-view>
 
-
+                    <!--</div>-->
                 </div>
 
             <footer class="footer">

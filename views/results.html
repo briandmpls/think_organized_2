@@ -1,3 +1,7 @@
+
+<div class = "fa fa-cog  fa-spin fa-5x" ng-show="loading"></div>
+
+
 <ul>
     <li ng-repeat="thing in donationList | orderBy:'distanceAway' | limitTo: 5">
         <span ng-class="here" class ="siteName">{{thing.name}}</span><br>
