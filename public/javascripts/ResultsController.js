@@ -90,7 +90,7 @@ app.controller('ResultsController', ['$scope','$http','$filter', function($scope
 
 
 
-        DirectionsService.route(request, function(response, status){
+        directionsService.route(request, function(response, status){
             console.log(response);
             if (status == google.maps.DirectionsStatus.OK) {
                 console.log('Status ok');
