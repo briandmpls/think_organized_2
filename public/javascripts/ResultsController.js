@@ -4,7 +4,7 @@
 
 app.controller('ResultsController', ['$scope','$http','$filter', function($scope,$http,$filter) {
 
-
+    $scope.loading = true;
     $scope.place = '';
     var lat= '';
     var long ='';
@@ -49,6 +49,8 @@ app.controller('ResultsController', ['$scope','$http','$filter', function($scope
         $scope.donationList = [];
 
         $http.get('/site/getSites',data).then(function (response) {
+            $scope.loading = false;
+
             // console.log(response);
             var dataItems = response.data;
 
