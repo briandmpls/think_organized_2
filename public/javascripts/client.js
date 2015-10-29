@@ -23,7 +23,8 @@ app.config(function($routeProvider, $locationProvider){
 
         })
         .otherwise({
-            redirect: '/'
+            templateUrl:'views/home.html',
+            controller: 'HomeController'
         });
 
     $locationProvider.html5Mode(true);
