@@ -23,19 +23,12 @@
         <div class = "wrapper" ng-controller="MainController">
             <img class = "logo" src="../images/SquaresMedium.jpg">
             <h1 class = "title">Think Organized</h1>
-            <div id="map"></div>
 
+            <div ng-class="initmap()"></div>
                 <div class = 'main'>
-                    <!--<div ng-show="loading">-->
 
-                    <ng-view>
+                    <ng-view></ng-view>
 
-                        <!--<i class="fa fa-spinner" ng-show="loading"></i>-->
-
-
-                    </ng-view>
-
-                    <!--</div>-->
                 </div>
 
             <footer class="footer">
