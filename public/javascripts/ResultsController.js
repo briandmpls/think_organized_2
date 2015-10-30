@@ -35,7 +35,6 @@ app.controller('ResultsController', ['$scope','$http','$filter', function($scope
 
         $scope.place = "Latitude:" + lat + "    Longitude: " + long;
 
-      //  $scope.$digest();
         console.log(lat,long);
         console.log($scope.place);
         getData();
@@ -73,11 +72,10 @@ app.controller('ResultsController', ['$scope','$http','$filter', function($scope
 
     }
 
-    var timeOut = setInterval(calcDistance, 5000);
+    //var timeOut = setInterval(calcDistance, 5000);
 
     function calcDistance(item){
         var directionsService = new google.maps.DirectionsService();
-
         var startingPoint = lat + ',' + long;
 
         address = item.location;
@@ -90,7 +88,7 @@ app.controller('ResultsController', ['$scope','$http','$filter', function($scope
         };
 
 
-        directionsService.route(request, function(response, status){
+        directionsService.route(request, function(result, status) {
             console.log(response);
             if (status == google.maps.DirectionsStatus.OK) {
                 console.log('Status ok');
