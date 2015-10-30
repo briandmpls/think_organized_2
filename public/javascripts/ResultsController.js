@@ -69,7 +69,7 @@ app.controller('ResultsController', ['$scope','$http','$filter', function($scope
 
     function calcDistance(item) {
         console.log("before");
-        var directionsService = new google.maps.DirectionsService();
+         directionsService = new google.maps.DirectionsService();
         console.log("after");
 
 
