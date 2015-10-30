@@ -71,18 +71,25 @@ app.controller('ResultsController', ['$scope','$http','$filter', function($scope
         console.log("before");
         var directionsService = new google.maps.DirectionsService();
         console.log("after");
-        var startingPoint = lat + ',' + long;
 
-        address = item.location;
-
-        var request = {
-            origin: startingPoint,
-            destination: address,
-            optimizeWaypoints: true,
-            travelMode: google.maps.TravelMode.DRIVING
-        };
 
         function calcRoute() {
+
+
+            var startingPoint = lat + ',' + long;
+
+            address = item.location;
+
+            var request = {
+                origin: startingPoint,
+                destination: address,
+                optimizeWaypoints: true,
+                travelMode: google.maps.TravelMode.DRIVING
+            };
+
+
+
+
             directionsService.route(request, function (response, status) {
                 if (status == google.maps.DirectionsStatus.OK) {
                     console.log('Status ok');
