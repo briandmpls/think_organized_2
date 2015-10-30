@@ -67,7 +67,7 @@ app.controller('ResultsController', ['$scope','$http','$filter', function($scope
 
     //var timeOut = setInterval(calcDistance, 5000);
 
-    function calcDistance(item){
+    function calcDistance(item) {
         var directionsService = new google.maps.DirectionsService();
         var startingPoint = lat + ',' + long;
 
@@ -80,32 +80,35 @@ app.controller('ResultsController', ['$scope','$http','$filter', function($scope
             travelMode: google.maps.TravelMode.DRIVING
         };
 
-
-        directionsService.route(request, function(response, status) {
-            if (status == google.maps.DirectionsStatus.OK) {
-                console.log('Status ok');
-                item.distanceAway = response.routes[0].legs[0].distance.value;
-                console.log('Data after modification', item);
-                item.distanceAway = (item.distanceAway/1609.34).toFixed(1);
-                item.distanceAway = parseFloat(item.distanceAway);
-                console.log(item.distanceAway);
+        function calcRoute() {
+            directionsService.route(request, function (response, status) {
+                if (status == google.maps.DirectionsStatus.OK) {
+                    console.log('Status ok');
+                    item.distanceAway = response.routes[0].legs[0].distance.value;
+                    console.log('Data after modification', item);
+                    item.distanceAway = (item.distanceAway / 1609.34).toFixed(1);
+                    item.distanceAway = parseFloat(item.distanceAway);
+                    console.log(item.distanceAway);
 
 ////Push to the distanceArray----------------(
-                console.log('before push');
-                console.log($scope.donationList);
-                $scope.donationList.push(item);
+                    console.log('before push');
+                    console.log($scope.donationList);
+                    $scope.donationList.push(item);
 
 
+                    $scope.$apply();
 
-                $scope.$apply();
+                } else {
+                    console.log("Problem Dude!", status);
+                }
 
-            }else{
-                console.log("Problem Dude!", status);
-            }
+            });
 
-        });
-
+        }
+        calcRoute();
     }
+
     getLocation();
+
 
 }]);
