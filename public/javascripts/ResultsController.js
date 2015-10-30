@@ -3,7 +3,7 @@
  */
 
 app.controller('ResultsController', ['$scope','$http','$filter', function($scope,$http,$filter) {
-    initMap();
+
     $scope.loading = true;
     $scope.place = '';
     var lat= '';
