@@ -113,3 +113,6 @@ li {
 #fa {
   font-size:50px;
 }
+#fa-spin {
+  -webkit-filter: blur(0);
+}
