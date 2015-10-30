@@ -89,7 +89,6 @@ app.controller('ResultsController', ['$scope','$http','$filter', function($scope
 
 
         directionsService.route(request, function(result, status) {
-            console.log(response);
             if (status == google.maps.DirectionsStatus.OK) {
                 console.log('Status ok');
                 item.distanceAway = response.routes[0].legs[0].distance.value;
