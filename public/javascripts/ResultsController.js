@@ -50,19 +50,12 @@ app.controller('ResultsController', ['$scope','$http','$filter', function($scope
         $http.get('/site/getSites',data).then(function (response) {
             $scope.loading = false;
 
-            // console.log(response);
             var dataItems = response.data;
 
-//How can this have distance away already if it is not in database
             console.log(response.data);
-            //console.log("dataItems = ", dataItems);
-
-
 
 //forEach Loop *******
             dataItems.forEach(function(item){
-               // console.log(item.distanceAway);
-                console.log(4);
                 console.log(item);
                 calcDistance(item);
             });
@@ -88,13 +81,12 @@ app.controller('ResultsController', ['$scope','$http','$filter', function($scope
         };
 
 
-        directionsService.route(request, function(result, status) {
+        directionsService.route(request, function(response, status) {
             if (status == google.maps.DirectionsStatus.OK) {
                 console.log('Status ok');
                 item.distanceAway = response.routes[0].legs[0].distance.value;
                 console.log('Data after modification', item);
                 item.distanceAway = (item.distanceAway/1609.34).toFixed(1);
-                //angular.isNumber(item.distanceAway);
                 item.distanceAway = parseFloat(item.distanceAway);
                 console.log(item.distanceAway);
 
