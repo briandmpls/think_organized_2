@@ -114,7 +114,9 @@ app.controller('ResultsController', ['$scope','$http','$filter', function($scope
             });
 
         }
-        calcRoute();
+        //var timeOut = setInterval(calcDistance, 5000);
+        var timeout = setInterval(calcRoute, 5000);
+
     }
 
     getLocation();
