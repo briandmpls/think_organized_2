@@ -68,7 +68,9 @@ app.controller('ResultsController', ['$scope','$http','$filter', function($scope
     //var timeOut = setInterval(calcDistance, 5000);
 
     function calcDistance(item) {
+        console.log("before");
         var directionsService = new google.maps.DirectionsService();
+        console.log("after");
         var startingPoint = lat + ',' + long;
 
         address = item.location;
