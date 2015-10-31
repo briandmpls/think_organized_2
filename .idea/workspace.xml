@@ -21,18 +21,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="client.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/javascripts/client.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
-              <folding>
-                <element signature="e#0#45#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ResultsController.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/javascripts/ResultsController.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -67,12 +55,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="results.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="results.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/results.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3517588">
-              <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
-              <folding />
+            <state vertical-scroll-proportion="-0.625">
+              <caret line="1" column="64" selection-start-line="1" selection-start-column="64" selection-end-line="1" selection-end-column="64" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -97,12 +87,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="contact.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="contact.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/contact.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.5">
-              <caret line="4" column="26" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
+            <state vertical-scroll-proportion="0.050251257">
+              <caret line="2" column="15" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ContactController.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/javascripts/ContactController.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+              <folding>
+                <element signature="e#0#45#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -158,10 +160,10 @@
         <option value="$PROJECT_DIR$/views/home.html" />
         <option value="$PROJECT_DIR$/public/javascripts/controller.js" />
         <option value="$PROJECT_DIR$/views/index.html" />
-        <option value="$PROJECT_DIR$/views/contact.html" />
         <option value="$PROJECT_DIR$/public/javascripts/ContactController.js" />
         <option value="$PROJECT_DIR$/public/stylesheets/style.css" />
         <option value="$PROJECT_DIR$/views/results.html" />
+        <option value="$PROJECT_DIR$/views/contact.html" />
       </list>
     </option>
   </component>
@@ -766,16 +768,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/ContactController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
-          <folding>
-            <element signature="e#0#45#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/client.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -822,14 +814,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/contact.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.5">
-          <caret line="4" column="26" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/add.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.125">
@@ -856,8 +840,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/results.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3517588">
-          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+        <state vertical-scroll-proportion="-0.625">
+          <caret line="1" column="64" selection-start-line="1" selection-start-column="64" selection-end-line="1" selection-end-column="64" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/ContactController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#45#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/contact.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.050251257">
+          <caret line="2" column="15" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
           <folding />
         </state>
       </provider>
