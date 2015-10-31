@@ -7,12 +7,11 @@ a {
   color: #0c4368;
 }
 
-/*h1{*/
-  /*font-size: 71px;*/
-  /*display: inline;*/
-  /*margin: 10px 0 0 31px;*/
-  /*color:#0c4368;*/
-/*}*/
+p {
+  font-size:30px;
+  color: #0c4368;
+}
+
 .title {
   margin-top: 10px;
   margin-left: 14px;
@@ -103,7 +102,7 @@ li {
 }
 
 .siteName{
- color: #BA4C46;
+ color: #ba4544;
 }
 
 .siteDistance{
@@ -115,4 +114,7 @@ li {
 }
 #fa-spin {
   -webkit-filter: blur(0);
+}
+#fa-cog {
+  color: #15abff;
 }
