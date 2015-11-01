@@ -38,6 +38,6 @@ app.controller('AddController', ['$scope','$http', function($scope,$http) {
 
 
     };
-    $scope.donationList= [];
+    //$scope.donationList= [];
 //Delete Sites from Database
 }]);
