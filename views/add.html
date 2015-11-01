@@ -1,6 +1,8 @@
+<form>
 <input class="inputHere" type="text" placeholder="Name" ng-model="newName">
 <input class="inputHere" type="text" placeholder="Address" ng-model="newLocation">
 <input class="inputHere" type="tel" placeholder="Phone #" ng-model="newPhone">
 <input class="inputHere" type="text" placeholder="Hours" ng-model="newHoursAccepting">
 <input class="inputHere" type="text" placeholder="Notes" ng-model="newNotes">
-<button class="add" ng-click="addNewSite() ,newName = null">Add</button><br>
+<button class="add" ng-submit="addNewSite() ,newName = null">Add</button><br>
+</form>
