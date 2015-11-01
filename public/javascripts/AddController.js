@@ -29,6 +29,14 @@ app.controller('AddController', ['$scope','$http', function($scope,$http) {
             notes: $scope.newNotes
         };
 
+        $scope.newName= '';
+        $scope.newLocation = '';
+        $scope.newPhone = '';
+        $scope.newHoursAccepting = '';
+        $scope.newNotes = '';
+
+
+
 //Post new sites to the database
         $http.post('/site/addSites', data).then(function (newData) {
             console.log('add site route');
