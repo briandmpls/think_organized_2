@@ -37,6 +37,6 @@ app.controller('AddController', ['$scope','$http', function($scope,$http) {
 
 
     };
-    $scope.newname = null;
+    $scope.donationList= null;
 //Delete Sites from Database
 }]);
