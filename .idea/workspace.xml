@@ -48,8 +48,8 @@
           <file leaf-file-name="AddController.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/public/javascripts/AddController.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.6882217">
-                  <caret line="39" column="4" selection-start-line="39" selection-start-column="4" selection-end-line="39" selection-end-column="4" />
+                <state vertical-scroll-proportion="0.72286373">
+                  <caret line="40" column="30" selection-start-line="40" selection-start-column="6" selection-end-line="40" selection-end-column="30" />
                   <folding>
                     <element signature="e#0#45#0" expanded="false" />
                   </folding>
@@ -875,8 +875,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/AddController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6882217">
-          <caret line="39" column="4" selection-start-line="39" selection-start-column="4" selection-end-line="39" selection-end-column="4" />
+        <state vertical-scroll-proportion="0.72286373">
+          <caret line="40" column="30" selection-start-line="40" selection-start-column="6" selection-end-line="40" selection-end-column="30" />
           <folding>
             <element signature="e#0#45#0" expanded="false" />
           </folding>
