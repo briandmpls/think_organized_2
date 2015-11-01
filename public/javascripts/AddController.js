@@ -33,10 +33,11 @@ app.controller('AddController', ['$scope','$http', function($scope,$http) {
         $http.post('/site/addSites', data).then(function (newData) {
             console.log('add site route');
             console.log(newData);
+            $scope.donationList= [];
         });
 
 
     };
-    $scope.donationList= null;
+
 //Delete Sites from Database
 }]);
