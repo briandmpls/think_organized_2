@@ -34,8 +34,9 @@ app.controller('AddController', ['$scope','$http', function($scope,$http) {
             console.log('add site route');
             console.log(newData);
         });
-       $scope.newname = null;
+
 
     };
+    $scope.newname = null;
 //Delete Sites from Database
 }]);
