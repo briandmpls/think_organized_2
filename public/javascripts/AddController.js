@@ -34,7 +34,7 @@ app.controller('AddController', ['$scope','$http', function($scope,$http) {
             console.log('add site route');
             console.log(newData);
         });
-
+        $scope.donationList = [];
     };
 //Delete Sites from Database
 }]);
