@@ -13,7 +13,7 @@ app.controller('ResultsController', ['$scope','$http','$filter', function($scope
     var data = [];
     var address = "";
     var orderBy = $filter('orderBy');
-
+    var myVar;
 
 //Establish empty array of objects
     $scope.donationList=[];
@@ -57,11 +57,11 @@ app.controller('ResultsController', ['$scope','$http','$filter', function($scope
 //forEach Loop *******
             dataItems.forEach(function(item){
                 console.log(item);
-                var myVar;
+                 myVar = setTimeout(calcDistance(item), 500);
 
-                function myFunction() {
-                    myVar = setTimeout(calcDistance(item), 500);
-                }
+                //function myFunction() {
+                //    myVar = setTimeout(calcDistance(item), 500);
+                //}
 
             });
 
