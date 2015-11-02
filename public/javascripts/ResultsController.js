@@ -88,7 +88,12 @@ app.controller('ResultsController', ['$scope','$http','$filter', function($scope
                 travelMode: google.maps.TravelMode.DRIVING
             };
 
+            function myFunc() {
+                console.log("my Func");
+            }
 
+
+            myVar = setTimeout(myFunc(), 500);
 
 
             directionsService.route(request, function (response, status) {
