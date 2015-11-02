@@ -57,11 +57,7 @@ app.controller('ResultsController', ['$scope','$http','$filter', function($scope
 //forEach Loop *******
             dataItems.forEach(function(item){
                 console.log(item);
-                 myVar = setTimeout(calcDistance(item), 1000);
-
-                //function myFunction() {
-                //    myVar = setTimeout(calcDistance(item), 500);
-                //}
+                calcDistance(item);
 
             });
 
@@ -121,7 +117,7 @@ app.controller('ResultsController', ['$scope','$http','$filter', function($scope
         }
         //var timeOut = setInterval(calcDistance, 5000);
         //var timeout = setInterval(calcRoute, 1000);
-        calcRoute();
+        myVar = setTimeout(calcRoute(), 1000);
     }
 
     getLocation();
