@@ -57,7 +57,7 @@ app.controller('ResultsController', ['$scope','$http','$filter', function($scope
 //forEach Loop *******
             dataItems.forEach(function(item){
                 console.log(item);
-                 myVar = setTimeout(calcDistance(item), 500);
+                 myVar = setTimeout(calcDistance(item), 1000);
 
                 //function myFunction() {
                 //    myVar = setTimeout(calcDistance(item), 500);
