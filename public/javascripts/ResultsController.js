@@ -76,7 +76,7 @@ app.controller('ResultsController', ['$scope','$http','$filter', function($scope
 
         function calcRoute() {
 
-
+            console.log("calc Route");
             var startingPoint = lat + ',' + long;
 
             address = item.location;
