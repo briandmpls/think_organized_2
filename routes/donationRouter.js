@@ -20,7 +20,7 @@ router.post('/addSites', function(req,res,next){
 });
 
 
-//Delete site from database?
+//Future spot to allow to delete site from database
 
 
 

@@ -120,8 +120,7 @@ app.controller('ResultsController', ['$scope','$http','$filter', function($scope
             });
 
         }
-        //var timeOut = setInterval(calcDistance, 5000);
-        //var timeout = setInterval(calcRoute, 1000);
+
         console.log("before timeout");
         myVar = setTimeout(calcRoute(), 2000);
     }
