@@ -88,12 +88,12 @@ app.controller('ResultsController', ['$scope','$http','$filter', function($scope
                 travelMode: google.maps.TravelMode.DRIVING
             };
 
-            function myFunc() {
-                console.log("my Func");
-            }
-
-
-            myVar = setTimeout(myFunc(), 500);
+            //function myFunc() {
+            //    console.log("my Func");
+            //}
+            //
+            //
+            //myVar = setTimeout(myFunc(), 500);
 
 
             directionsService.route(request, function (response, status) {
@@ -113,7 +113,11 @@ app.controller('ResultsController', ['$scope','$http','$filter', function($scope
 
                     $scope.$apply();
 
-                } else {
+                } else if(status == google.maps.DirectionsStatus.OVER_QUERY_LIMIT) {
+                    setTimeout(function () {
+                        calcRoute();
+                    }, 200);
+                }else {
                     console.log("Problem Dude!", status);
                 }
 
