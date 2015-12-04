@@ -13,13 +13,13 @@ app.controller('ResultsController', ['$scope','$http','$filter', function($scope
     var data = [];
     var address = "";
     var orderBy = $filter('orderBy');
-    var myVar;
 
-//Establish empty array of objects
+
+    //Establish empty array of objects
     $scope.donationList=[];
 
 
-// Search for current location
+    // Search for current location
 
     function getLocation() {
         if (navigator.geolocation) {
@@ -29,6 +29,7 @@ app.controller('ResultsController', ['$scope','$http','$filter', function($scope
         }
     }
 
+    //sets current position to lat and long variables
     $scope.showPosition = function(position) {
         lat = position.coords.latitude;
         long = position.coords.longitude;
@@ -42,7 +43,7 @@ app.controller('ResultsController', ['$scope','$http','$filter', function($scope
 
 
 
-// HTTP call to database
+    // HTTP call to database
 
     function getData(){
         $scope.donationList = [];
@@ -54,7 +55,7 @@ app.controller('ResultsController', ['$scope','$http','$filter', function($scope
 
             console.log(response.data);
 
-//forEach Loop *******
+            //forEach Loop
             dataItems.forEach(function(item){
                 console.log(item);
                 calcDistance(item);
@@ -66,14 +67,15 @@ app.controller('ResultsController', ['$scope','$http','$filter', function($scope
 
     }
 
-    //var timeOut = setInterval(calcDistance, 5000);
+
+    // Calculates the distance between current position and donation site in database
 
     function calcDistance(item) {
         console.log("before");
        directionsService = new google.maps.DirectionsService();
         console.log("after");
 
-
+        console.log("Api Key",process.env.apikey);
         function calcRoute() {
 
             console.log("calc Route");
@@ -88,12 +90,6 @@ app.controller('ResultsController', ['$scope','$http','$filter', function($scope
                 travelMode: google.maps.TravelMode.DRIVING
             };
 
-            //function myFunc() {
-            //    console.log("my Func");
-            //}
-            //
-            //
-            //myVar = setTimeout(myFunc(), 500);
 
 
             directionsService.route(request, function (response, status) {
@@ -105,7 +101,7 @@ app.controller('ResultsController', ['$scope','$http','$filter', function($scope
                     item.distanceAway = parseFloat(item.distanceAway);
                     console.log(item.distanceAway);
 
-////Push to the distanceArray----------------(
+                    ////Push to the distanceArray----------------(
                     console.log('before push');
                     console.log($scope.donationList);
                     $scope.donationList.push(item);
@@ -113,20 +109,22 @@ app.controller('ResultsController', ['$scope','$http','$filter', function($scope
 
                     $scope.$apply();
 
+
+
+                //Sets a timeout function to not go over query limit because of Google restrictions
+
                 } else if(status == google.maps.DirectionsStatus.OVER_QUERY_LIMIT) {
                     setTimeout(function () {
                         calcRoute();
                     }, 200);
                 }else {
-                    console.log("Problem Dude!", status);
+                    console.log("Problem", status);
                 }
 
             });
 
         }
 
-        console.log("before timeout");
-        myVar = setTimeout(calcRoute(), 2000);
     }
 
     getLocation();

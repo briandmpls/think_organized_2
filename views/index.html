@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <script src="https://maps.googleapis.com/maps/api/js"></script>
-    <!--<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBmkRY5s06HS05nz-vWhfepD2QiUUsju44&callback=initMap"></script>-->
+    <!--<script async defer src="https://maps.googleapis.com/maps/api/js?key=process.env.apikey&callback=initMap"></script>-->
     <link rel="stylesheet" href="./stylesheets/style.css"/>
     <link rel="stylesheet" href="./stylesheets/font-awesome/css/font-awesome.min.css">
     <script src="/vendor/angular/angular.min.js"></script>
@@ -27,8 +27,7 @@
         <div class = "wrapper" ng-controller="MainController">
             <img class = "logo" src="../images/SquaresMedium.jpg">
             <h1 class = "title">Think Organized</h1>
-            <!--<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d90325.28539612687!2d-93.33151812925587!3d44.9707970433974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x52b333909377bbbd%3A0x939fc9842f7aee07!2sMinneapolis%2C+MN!5e0!3m2!1sen!2sus!4v1449180314106" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>            &lt;!&ndash;<div ></div>&ndash;&gt;-->
-                <div id = "map" class = 'main'>
+            <div id = "map" class = 'main'>
 
                     <ng-view></ng-view>
 
@@ -39,6 +38,7 @@
                 <a class = "footerButton" href="/add">Add A Site</a>
                 <a class = "footerButton" href="/contact">Contact</a>
             </footer>
+            <iframe ng-hide="false" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d90325.28539612687!2d-93.33151812925587!3d44.9707970433974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x52b333909377bbbd%3A0x939fc9842f7aee07!2sMinneapolis%2C+MN!5e0!3m2!1sen!2sus!4v1449180314106" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>            <!--<div ></div>-->
 
         </div>
 
