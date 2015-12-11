@@ -54,7 +54,7 @@ app.controller('ResultsController', ['$scope','$http','$filter', function($scope
 
             console.log(response.data);
 
-//forEach Loop *******
+           //forEach Loop *******
             dataItems.forEach(function(item){
                 console.log(item);
                 calcDistance(item);
@@ -66,12 +66,12 @@ app.controller('ResultsController', ['$scope','$http','$filter', function($scope
 
     }
 
-    //var timeOut = setInterval(calcDistance, 5000);
+
 
     function calcDistance(item) {
-        console.log("before");
-       directionsService = new google.maps.DirectionsService();
-        console.log("after");
+
+        directionsService = new google.maps.DirectionsService();
+
 
 
         function calcRoute() {
@@ -88,14 +88,7 @@ app.controller('ResultsController', ['$scope','$http','$filter', function($scope
                 travelMode: google.maps.TravelMode.DRIVING
             };
 
-            //function myFunc() {
-            //    console.log("my Func");
-            //}
-            //
-            //
-            //myVar = setTimeout(myFunc(), 500);
-
-
+            //Google distance away
             directionsService.route(request, function (response, status) {
                 if (status == google.maps.DirectionsStatus.OK) {
                     console.log('Status ok');
@@ -105,7 +98,7 @@ app.controller('ResultsController', ['$scope','$http','$filter', function($scope
                     item.distanceAway = parseFloat(item.distanceAway);
                     console.log(item.distanceAway);
 
-////Push to the distanceArray----------------(
+                   //Push to the distanceArray----------------(
                     console.log('before push');
                     console.log($scope.donationList);
                     $scope.donationList.push(item);
@@ -118,14 +111,13 @@ app.controller('ResultsController', ['$scope','$http','$filter', function($scope
                         calcRoute();
                     }, 200);
                 }else {
-                    console.log("Problem Dude!", status);
+                    console.log("Problem ", status);
                 }
 
             });
 
         }
 
-        console.log("before timeout");
         myVar = setTimeout(calcRoute(), 2000);
     }
 
