@@ -16,17 +16,18 @@ p {
   margin-top: 10px;
   margin-left: 14px;
   float: left;
-  font-size: 76px;
+  font-size: 500%;
   color: #0c4368;
 }
 
 .logo {
-  width: 250px;
+  width:25%;
   float:left;
 
 }
+
 li {
-  font-size: 30px;
+  font-size: 20px;
 }
 
 .main {
@@ -60,43 +61,33 @@ li {
 
 }
 
-.searchButton {
-  width: 50%;
-  text-align: center;
-  font-size: 45px;
-  margin: 55px 143px;
-  padding: 65px;
-  background-color: #1d6e99;
-  border-radius: 47px;
-  text-decoration: none;
-  display: block;
+.btn-primary{
+  padding:20px 50px;
+  margin:55px auto;
+  border-radius: 5%;
+  background-color: #3364BF;
   color:black;
-
 }
 
+/*.searchButton {*/
+  /*width: 50%;*/
+  /*text-align: center;*/
+  /*font-size: 45px;*/
+  /*margin: 55px 143px;*/
+  /*padding: 65px;*/
+  /*background-color: #1d6e99;*/
+  /*border-radius: 47px;*/
+  /*text-decoration: none;*/
+  /*display: block;*/
+  /*color:black;*/
 
-.searchButton:hover {
+/*}*/
+
+
+.btn-primary:hover {
   background-color: #629046;
 }
 
-
-.footer{
-  width: 50%;
-  font-size: 40px;
-  margin-top: 200px;
-  display: inline;
-  text-align: center;
-  color: #0c4368;
-}
-
-.footerButtonLeft{
-  padding-left:37px;
-}
-
-.footerButton{
-  padding-left: 173px;
-  color: #0c4368;
-}
 .siteInfo {
   color:#0C4368;
 }
@@ -117,4 +108,58 @@ li {
 }
 #fa-cog {
   color: #15abff;
+}
+
+
+/*Media Queries*/
+@media (min-width:300px) and (max-width:630px) {
+  body{
+
+  }
+  .logo {
+    width:35%;
+  }
+
+  .title{
+    font-size:30px;
+  }
+  .add {
+    width: 106%;
+    font-size: 14px;
+    margin: 50px 13px;
+    padding: 12px;
+    background-color: #3364BF;
+    border-radius: 7px;
+    text-underline: none;
+
+  }
+  .inputHere {
+    display:block;
+    padding: 35px;
+    margin:13px;
+    width:83%;
+    font-size:14px;
+  }
+  .btn-primary{
+    width:460%;
+    padding:10px ;
+    margin:55px 10px;
+    border-radius: 5%;
+    background-color: #3364BF;
+    color:black;
+  }
+  .inputHere {
+    display:block;
+    padding: 6px;
+    margin:12px;
+    width:89%;
+    font-size:16px;
+  }
+
+  #fa {
+    font-size:10px;
+  }
+  li{
+    font-size:12px;
+  }
 }

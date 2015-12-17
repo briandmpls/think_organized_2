@@ -2,45 +2,65 @@
 <html lang="en" ng-app="site">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <script src="https://maps.googleapis.com/maps/api/js"></script>
-    <link rel="stylesheet" href="./stylesheets/style.css"/>
-    <link rel="stylesheet" href="./stylesheets/font-awesome/css/font-awesome.min.css">
     <script src="/vendor/angular/angular.min.js"></script>
     <script src="/vendor/angular-route/angular-route.min.js"></script>
     <script src="/vendor/angular-route/angular-route.min.js.map"></script>
+    <script src="/vendor/jquery/dist/jquery.min.js"></script>
     <script src="javascripts/client.js"></script>
     <script src="javascripts/controller.js"></script>
     <script src="javascripts/ContactController.js"></script>
     <script src="javascripts/AddController.js"></script>
     <script src="javascripts/HomeController.js"></script>
     <script src="javascripts/ResultsController.js"></script>
+    <script src="../public/stylesheets/bootstrap/dist/css/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="./stylesheets/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./stylesheets/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./stylesheets/style.css"/>
+
     <base href="/">
     <title>Donate-A-Tron 3000</title>
 
 </head>
 
-<body>
+    <body>
 
 
 
-        <div class = "wrapper" ng-controller="MainController">
-            <img class = "logo" src="../images/SquaresMedium.jpg">
-            <h1 class = "title">Think Organized</h1>
-            <iframe ng-hide ="true" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d90325.28539612687!2d-93.33151812925587!3d44.9707970433974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x52b333909377bbbd%3A0x939fc9842f7aee07!2sMinneapolis%2C+MN!5e0!3m2!1sen!2sus!4v1449180314106" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>            <!--<div ></div>-->
-                <div id = "map" class = 'main'>
-
-                    <ng-view></ng-view>
+            <div class = "wrapper" ng-controller="MainController">
+                <div class="row">
+                        <img class = "logo col-lg-3 col-md-4 col-sm-4 col-xs-4" src="../images/SquaresMedium.jpg">
+                        <h1 class = "title col-lg-8 col-md-8 col-sm-8 col-xs-8">Think Organized</h1>
 
                 </div>
 
-            <footer class="footer">
-                <a class = "footerButtonLeft" href="/">Home</a>
-                <a class = "footerButton" href="/add">Add A Site</a>
-                <a class = "footerButton" href="/contact">Contact</a>
-            </footer>
 
-        </div>
+                     <iframe ng-hide ="true" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d90325.28539612687!2d-93.33151812925587!3d44.9707970433974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x52b333909377bbbd%3A0x939fc9842f7aee07!2sMinneapolis%2C+MN!5e0!3m2!1sen!2sus!4v1449180314106" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
 
-</body>
+                    <div id = "map" class = 'main'>
+                        <ng-view></ng-view>
+                    </div>
+
+
+            <div class="footer">
+                <footer class="footer">
+                    <div class="row">
+                        <ul class='list-unstyled'>
+                                <li><a class ="col-md-4 col-sm-4 col-xs-4 text-center" href="/">Home</a></li>
+                                <li><a class ="col-md-4 col-sm-4 col-xs-4 text-center"href="/add">Add A Site</a></li>
+                                <li><a class ="col-md-4 col-sm-4 col-xs-4 text-center" href="/contact">Contact</a></li>
+                            </ul>
+
+                    </div>
+                </footer>
+
+            </div>
+
+
+    </body>
 
 </html>
