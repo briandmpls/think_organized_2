@@ -100,13 +100,13 @@ li {
   color: #629046;
 }
 
-#fa {
+.fa {
   font-size:50px;
 }
-#fa-spin {
+.fa-spin {
   -webkit-filter: blur(0);
 }
-#fa-cog {
+.fa-cog {
   color: #15abff;
 }
 
@@ -160,8 +160,8 @@ li {
     font-size:16px;
   }
 
-  #fa {
-    font-size:10px;
+  .fa {
+    font-size:30px;
   }
   li{
     font-size:12px;
