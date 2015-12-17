@@ -122,6 +122,10 @@ li {
 
   .title{
     font-size:30px;
+    margin-top:-5px;
+    width:59%;
+    margin-left:14px;
+    padding: auto 15px;
   }
   .add {
     width: 106%;
