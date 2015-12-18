@@ -117,18 +117,17 @@ li {
 
   }
   .logo {
-    width:35%;
+    width:41%;
   }
 
   .title{
     font-size:30px;
-    margin-top:-5px;
     width:59%;
-    margin-left:14px;
+    margin-left:-3px;
     padding: auto 15px;
   }
   .add {
-    width: 106%;
+    width: 89%;
     font-size: 14px;
     margin: 50px 13px;
     padding: 12px;
@@ -165,5 +164,8 @@ li {
   }
   li{
     font-size:12px;
+  }
+  .footer{
+    font-size: 14px;
   }
 }
