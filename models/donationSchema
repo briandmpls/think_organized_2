@@ -6,8 +6,8 @@ var donationSchema = new Schema({
     location : String,
     phone : String,
     hoursAccepting : String,
-    notes : String
-   // distanceAway: Number
+    notes : String,
+    coordinates: [Number,Number]
 
 });
 

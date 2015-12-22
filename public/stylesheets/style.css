@@ -16,18 +16,23 @@ p {
   margin-top: 10px;
   margin-left: 14px;
   float: left;
-  font-size: 500%;
+  font-size: 400%;
   color: #0c4368;
 }
 
 .logo {
-  width:25%;
+  width:18%;
   float:left;
+  margin:0% 12%;
 
 }
 
 li {
   font-size: 20px;
+}
+
+.here {
+  margin: 5% auto;
 }
 
 .main {
@@ -38,10 +43,10 @@ li {
 }
 .inputHere {
   display:block;
-  padding: 35px;
-  margin:13px;
-  width:83%;
-  font-size:46px;
+  padding: 24px;
+  margin:20px auto;
+  width:53%;
+  font-size:22px;
 }
 
 .wrapper{
@@ -51,37 +56,39 @@ li {
 }
 
 .add {
-  width: 63%;
-  font-size: 45px;
-  margin: 55px 143px;
-  padding: 65px;
+  width: 20%;
+  font-size: 33px;
+  margin: 55px 38%;
+  padding: 14px;
   background-color: #3364BF;
-  border-radius: 47px;
+  border-radius: 9px;
   text-underline: none;
+
 
 }
 
 .btn-primary{
-  padding:20px 50px;
-  margin:55px auto;
+  width:20%;
+  padding:20px 7px;
+  margin:69px 30%;
   border-radius: 5%;
   background-color: #3364BF;
   color:black;
 }
 
-/*.searchButton {*/
-  /*width: 50%;*/
-  /*text-align: center;*/
-  /*font-size: 45px;*/
-  /*margin: 55px 143px;*/
-  /*padding: 65px;*/
-  /*background-color: #1d6e99;*/
-  /*border-radius: 47px;*/
-  /*text-decoration: none;*/
-  /*display: block;*/
-  /*color:black;*/
+.searchButton {
+  width: 50%;
+  text-align: center;
+  font-size: 45px;
+  margin: 55px 143px;
+  padding: 65px;
+  background-color: #1d6e99;
+  border-radius: 47px;
+  text-decoration: none;
+  display: block;
+  color:black;
 
-/*}*/
+}
 
 
 .btn-primary:hover {
@@ -112,17 +119,17 @@ li {
 
 
 /*Media Queries*/
-@media (min-width:300px) and (max-width:630px) {
+@media (min-width:300px) and (max-width:800px) {
   body{
 
   }
   .logo {
-    width:41%;
+    width:30%;
   }
 
   .title{
-    font-size:30px;
-    width:59%;
+    font-size:25px;
+    width:44%;
     margin-left:-3px;
     padding: auto 15px;
   }
@@ -144,13 +151,27 @@ li {
     font-size:14px;
   }
   .btn-primary{
-    width:460%;
+    width:65%;
     padding:10px ;
-    margin:55px 10px;
+    margin:55px 20%;
     border-radius: 5%;
     background-color: #3364BF;
     color:black;
   }
+
+  /*.searchButton {*/
+    /*width: 50%;*/
+    /*text-align: center;*/
+    /*font-size: 45px;*/
+    /*margin: 55px 143px;*/
+    /*padding: 65px;*/
+    /*background-color: #1d6e99;*/
+    /*border-radius: 47px;*/
+    /*text-decoration: none;*/
+    /*display: block;*/
+    /*color:black;*/
+
+  /*}*/
   .inputHere {
     display:block;
     padding: 6px;
