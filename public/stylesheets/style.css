@@ -186,6 +186,14 @@ li {
   li{
     font-size:12px;
   }
+  p{
+    font-size:12px;
+    display: inline;
+    margin:20px auto;
+
+  }
+
+
   .footer{
     font-size: 14px;
   }
