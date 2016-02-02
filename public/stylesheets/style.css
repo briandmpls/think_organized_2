@@ -20,12 +20,24 @@ p {
   color: #0c4368;
 }
 
+.calc {
+  margin-left: 14px;
+  float: left;
+  color:  #0c4368;
+}
+
 .logo {
   width:18%;
   float:left;
   margin:0% 12%;
 
 }
+
+
+ul {
+  padding-left: 30%;
+}
+
 
 li {
   font-size: 20px;
@@ -129,6 +141,13 @@ li {
 
   .title{
     font-size:25px;
+    width:44%;
+    margin-left:-3px;
+    padding: auto 15px;
+  }
+
+  .calc {
+    font-size:20px;
     width:44%;
     margin-left:-3px;
     padding: auto 15px;
