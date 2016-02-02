@@ -20,6 +20,8 @@ router.post('/addSites', function(req,res,next){
 });
 
 
+
+
 //Future spot to allow to delete site from database
 
 

@@ -15,6 +15,7 @@ app.controller('ResultsController', ['$scope','$http','$filter', function($scope
     var orderBy = $filter('orderBy');
     var myVar;
 
+
 //Establish empty array of objects
     $scope.donationList=[];
 
@@ -56,9 +57,16 @@ app.controller('ResultsController', ['$scope','$http','$filter', function($scope
 
            //forEach Loop *******
             dataItems.forEach(function(item){
-                console.log(item);
-                calcDistance(item);
 
+                var lat2 = item.coordinates[0];
+                var lon2 = item.coordinates[1];
+
+                console.log("Lat2 :" + lat2);
+                console.log("Lon2: " + lon2);
+
+                console.log("Item Location: " + item.location);
+                //calcDistance(item);
+                getDistanceFromLatLonInKm(lat,long,lat2,lon2,item);
             });
 
 
@@ -66,6 +74,10 @@ app.controller('ResultsController', ['$scope','$http','$filter', function($scope
 
     }
 
+
+// Calculates distance away using Google  Driving Distance Distance
+//    This way is very slow as it take many calls to Google API
+//    ******** Not currently using lines 83-138 **********
 
 
     function calcDistance(item) {
@@ -80,6 +92,10 @@ app.controller('ResultsController', ['$scope','$http','$filter', function($scope
             var startingPoint = lat + ',' + long;
 
             address = item.location;
+
+            //console.log("Starting Point" + startingPoint);
+            console.log("Address to search for" + address);
+
 
             var request = {
                 origin: startingPoint,
@@ -100,7 +116,7 @@ app.controller('ResultsController', ['$scope','$http','$filter', function($scope
 
                    //Push to the distanceArray----------------(
                     console.log('before push');
-                    console.log($scope.donationList);
+                    //console.log($scope.donationList);
                     $scope.donationList.push(item);
 
 
@@ -120,6 +136,48 @@ app.controller('ResultsController', ['$scope','$http','$filter', function($scope
 
         myVar = setTimeout(calcRoute(), 2000);
     }
+
+// End of Google Distance Driving distance calculations ******** Not Using above code*****
+
+
+
+
+
+    //Calculating distance away  based on the Haversine formula
+
+    function getDistanceFromLatLonInKm(lat,long,lat2,lon2,item) {
+        var R = 6371; // Radius of the earth in km
+        var dLat = deg2rad(lat2-lat);  // deg2rad below
+        var dLon = deg2rad(lon2-long);
+        var a =
+                Math.sin(dLat/2) * Math.sin(dLat/2) +
+                Math.cos(deg2rad(lat)) * Math.cos(deg2rad(lat2)) *
+                Math.sin(dLon/2) * Math.sin(dLon/2)
+            ;
+        var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+        var d = R * c; // Distance in km
+        console.log("Distance: " + d);
+
+                    console.log('Status ok');
+                    item.distanceAway = d;
+                    //console.log('Data after modification', item);
+                    item.distanceAway = d.toFixed(1);
+                    item.distanceAway = parseFloat(item.distanceAway);
+                    console.log(item.distanceAway);
+
+                    //Push to the distanceArray----------------(
+                    console.log('before push');
+                    //console.log($scope.donationList);
+                    $scope.donationList.push(item);
+
+        return d;
+    };
+
+    function deg2rad(deg) {
+        return deg * (Math.PI/180)
+    };
+
+
 
     getLocation();
 
