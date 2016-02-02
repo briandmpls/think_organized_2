@@ -147,6 +147,11 @@ li {
   body{
 
   }
+
+  .wrapper{
+    margin: 0 -37px 10px;
+  }
+
   .logo {
     width:30%;
   }
@@ -157,9 +162,11 @@ li {
     margin-left:-3px;
     padding: auto 15px;
   }
-
+ul {
+  padding-left:15%
+}
   .calc {
-    font-size:20px;
+    font-size:17px;
     width:44%;
     margin-left:-3px;
     padding: auto 15px;
@@ -182,11 +189,11 @@ li {
     font-size:14px;
   }
   .btn-primary{
-    width:65%;
+    width:50%;
     padding:10px ;
-    margin:55px 20%;
-    border-radius: 5%;
-    background-color: #3364BF;
+    margin:55px 24%;
+    border-radius: 16px;
+    background-color: #018cb7;
     color:black;
   }
 
@@ -228,5 +235,6 @@ li {
   .footer{
     font-size: 14px;
     margin-top: 10px;
+    margin-bottom:10px;
   }
 }
