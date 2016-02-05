@@ -1,15 +1,18 @@
 
 <div class = "fa fa-square  fa-spin" style ="color: #116e9f" ng-show="loading"></div>
 
+<h3>Click on site to get driving directions</h3>
 
 <ul>
     <li ng-repeat="thing in donationList | orderBy:'distanceAway' | limitTo: 10">
-        <span ng-class="here" class ="siteName">{{thing.name}}</span><br>
-        <span ng-class="here" class ="siteInfo">{{thing.location}}</span><br>
-        <span ng-class="here" class ="siteInfo">{{thing.phone}}</span><br>
-        <span ng-class="here" class ="siteInfo">{{thing.hoursAccepting}}</span><br>
-        <span ng-class="here" class ="siteInfo">{{thing.notes}}</span><br>
-        <span ng-class="here" class ="siteDistance">{{thing.distanceAway}} miles</span><br><br>
+        <a href="https://www.google.com/maps/dir/Current+Location/{{thing.coordinates[0]}},{{thing.coordinates[1]}}" >
+            <span ng-class="here" class ="siteName">{{thing.name}}</span><br>
+            <span ng-class="here" class ="siteInfo">{{thing.location}}</span><br>
+            <span ng-class="here" class ="siteInfo">{{thing.phone}}</span><br>
+            <span ng-class="here" class ="siteInfo">{{thing.hoursAccepting}}</span><br>
+            <span ng-class="here" class ="siteInfo">{{thing.notes}}</span><br>
+            <span ng-class="here" class ="siteDistance">{{thing.distanceAway}} miles</span>
+        </a><br><br>
     </li>
 
 </ul>

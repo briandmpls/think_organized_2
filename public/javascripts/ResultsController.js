@@ -35,8 +35,9 @@ app.controller('ResultsController', ['$scope','$http','$filter', function($scope
         long = position.coords.longitude;
 
         $scope.place = "Latitude:" + lat + "    Longitude: " + long;
-
-        console.log(lat,long);
+        $scope.lat= lat;
+        $scope.long = long;
+        console.log($scope.lat);
         console.log($scope.place);
         getData();
     };
