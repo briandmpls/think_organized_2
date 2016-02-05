@@ -147,6 +147,10 @@ h3 {
   color: #ba4544;
 }
 
+.gmap a {
+  text-decoration: none;
+}
+
 
 /*Media Queries*/
 @media (min-width:300px) and (max-width:750px) {
@@ -235,6 +239,10 @@ ul {
     display: inline;
     margin:20px auto;
 
+  }
+
+  h3 {
+    font-size: 14px;
   }
 
 
